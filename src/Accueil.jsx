@@ -224,7 +224,7 @@ const Accueil = () => {
             :5ᵉ étage, Langham Housse, 302-308 Regent Steet,
             Londres, W1B 3AT.Numéro d'entreprise : 066337638.
           </p>
-          <img height={100} src={visa} alt="" />
+          <img height={100} width={200} src={visa} alt="" />
         </div>
         <hr></hr>
         <div className="footer">
