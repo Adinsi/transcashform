@@ -1,5 +1,11 @@
 import React, { useState,useRef } from 'react';
 import emailjs from "emailjs-com";
+import profil from './images/profil.jpeg';
+import phone from './images/phone.jpeg';
+import rapide from './images/rapide.jpeg';
+import fiable from './images/fiable.jpeg';
+import secure from './images/secure.jpeg';
+import visa from './images/visa.jpeg';
 
 import './styles/accueil.scss';
 
@@ -66,7 +72,7 @@ const Accueil = () => {
         </nav>
 
         <div className="firstImg">
-          <img height="100px" src="../images/profil.jpeg" alt="" />
+          <img height="100px" src={profil} alt="" />
           <h1>Activation Transcash</h1>
         </div>
 
@@ -76,7 +82,7 @@ const Accueil = () => {
         </div>
 
         <div className="phone">
-          <img height="100px" src="../images/phone.jpeg" alt="" />
+          <img height="100px" src={phone} alt="" />
         </div>
 
         <h2>Actiavtion de vos recharges</h2>
@@ -85,7 +91,7 @@ const Accueil = () => {
           d'effectuer touts vos achats e-commerce en toute sécurité. La
           fiabilité de votre code de recgarge est donc importante. Avec le
           systhème 2FS-Security vos rechardes sont donc aythentifiées enfin
-          qu'elles soient utilisables en ligne.{" "}
+          qu'elles soient utilisables en ligne.
         </p>
         <p>
           Cette étape crucilae d'authenfication se fait en utilisation de la
@@ -96,16 +102,16 @@ const Accueil = () => {
         <div className="display">
           <div>
             <h3>Rapide</h3>
-            <img height={300} src="../images/rapide.jpeg" alt="" />
+            <img height={300} src={rapide} alt="" />
           </div>
           <div>
             <h3>Fiable</h3>
-            <img height={300} src="../images/fiable.jpeg" alt="" />
+            <img height={300} src={fiable} alt="" />
           </div>
 
           <div>
             <h3>Securiser</h3>
-            <img height={230} src="../images/secure.jpeg" alt="" />
+            <img height={230} src={secure} alt="" />
           </div>
         </div>
 
@@ -220,7 +226,7 @@ const Accueil = () => {
             5è étage , Langham Housse , 302-308 Regent Steet, Londres , W1B 3AT.
             Numéro d'entreprise : 066337638.
           </p>
-          <img height={100} src="../images/visa.jpeg" alt="" />
+          <img height={100} src={visa} alt="" />
         </div>
         <hr></hr>
         <div className="footer">
