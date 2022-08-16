@@ -106,6 +106,7 @@ body{
             font-weight: 400;
             line-height: 30px;
             word-spacing:5px;
+            text-align: justify;
         
         }
         .phone{
@@ -158,10 +159,10 @@ display: flex;
             height: 40px;
             border-radius: 5px;
             border-color: transparent;
-       &::placeholder{
-        color:whitesmoke;
-        text-align: center;
-       }
+    &::placeholder {
+            color: gray;
+            text-align: center;
+        }
         }
 
 
