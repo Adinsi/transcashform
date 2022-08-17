@@ -101,6 +101,10 @@ body{
            
             text-align: center;
         }
+
+        h3{
+            color: #d25d1e;
+        }
         p{
             color: white;
             font-weight: 400;
@@ -118,16 +122,19 @@ body{
 
         .display{
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
             align-content: center;
+            justify-content: space-around;
             h3{
                 color: white;
                 font-weight: bolder;
                 text-align: center;
+                // display:none;
             }
             img{
                 border-radius: 15px;
+                height: 300px;
             }
         }
     }
@@ -154,9 +161,10 @@ display: flex;
     flex-direction: column;
     color:white;
     padding-bottom: 15px;
+    position: relative;
    
     input {
-            height: 40px;
+            height: 60px;
             border-radius: 5px;
             border-color: transparent;
     &::placeholder {
@@ -180,9 +188,14 @@ display: flex;
         text-align: center;
         width: 80%;
         margin-top: 40px;
+        margin-left: 65px;
         color: gray;
         font-size: 1.1rem;
         border: none;
+        cursor: pointer;
+        &:hover{
+            background-color: blue;
+        }
        }
     }
 
@@ -233,7 +246,7 @@ display: flex;
                     flex-direction: column;
                     position: absolute;
                     right: 0;
-                    width: 200px;
+                    width: 100%;
                     position: fixed;
                     margin-top: 100px;
                     transition: all .2s ease-in;
@@ -284,6 +297,7 @@ display: flex;
                     font-weight: bolder;
                     text-shadow: 5px 5px 5px black;
                     text-align: center;
+                    font-family: fantasy;
 
                 }
 
@@ -300,10 +314,13 @@ display: flex;
                     width: 80%;
                     text-align: center;
                 }
+                h3{
+                color: #d25d1e;
+                }
             }
 
             h2 {
-                color: green;
+                color:rgb(237, 217, 217);
 
                 text-align: center;
             }
@@ -313,6 +330,7 @@ display: flex;
                 font-weight: 400;
                 line-height: 30px;
                 word-spacing: 5px;
+                text-align: justify;
 
             }
 
@@ -364,6 +382,7 @@ display: flex;
                         flex-direction: column;
                         color: white;
                         padding-bottom: 15px;
+                        position: relative;
 
                         input {
                             height: 40px;
@@ -388,15 +407,20 @@ display: flex;
 
             #submit {
                 display: block;
-                background-color: whitesmoke;
+                background:linear-gradient(rgb(183, 183, 183),rgb(96, 103, 83));
                 box-shadow: 5px 5px 5px gray;
                 height: 80px;
                 text-align: center;
                 width: 80%;
                 margin-top: 40px;
-                color: gray;
+                margin-left: 45px;
+                color:rgb(246, 236, 236);
                 font-size: 1.1rem;
                 border: none;
+                cursor: pointer;
+                &:hover {
+                        background:rgb(0, 211, 39);
+                    }
             }
         }
 

