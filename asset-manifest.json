@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/transcashform/static/css/main.dc023832.css",
-    "main.js": "/transcashform/static/js/main.e34f8a6a.js",
+    "main.css": "/transcashform/static/css/main.84b80ec8.css",
+    "main.js": "/transcashform/static/js/main.edd79c25.js",
     "static/media/back.jpg": "/transcashform/static/media/back.f88feb681949e54ccaf1.jpg",
     "static/media/secure.jpeg": "/transcashform/static/media/secure.e8b392a5d98624270e28.jpeg",
     "static/media/fiable.jpeg": "/transcashform/static/media/fiable.cda1e556217e3e211221.jpeg",
@@ -10,11 +10,11 @@
     "static/media/visa.jpeg": "/transcashform/static/media/visa.afb14a97e2afdceedc98.jpeg",
     "static/media/profil.jpeg": "/transcashform/static/media/profil.d77e974804f33cb595c3.jpeg",
     "index.html": "/transcashform/index.html",
-    "main.dc023832.css.map": "/transcashform/static/css/main.dc023832.css.map",
-    "main.e34f8a6a.js.map": "/transcashform/static/js/main.e34f8a6a.js.map"
+    "main.84b80ec8.css.map": "/transcashform/static/css/main.84b80ec8.css.map",
+    "main.edd79c25.js.map": "/transcashform/static/js/main.edd79c25.js.map"
   },
   "entrypoints": [
-    "static/css/main.dc023832.css",
-    "static/js/main.e34f8a6a.js"
+    "static/css/main.84b80ec8.css",
+    "static/js/main.edd79c25.js"
   ]
 }
