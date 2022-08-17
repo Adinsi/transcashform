@@ -4,7 +4,7 @@
     
 body{
     background-image: url('../../public/images/back.jpg');
-    background-position: left;
+    background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -222,7 +222,7 @@ display: flex;
 
     body {
         background-image: url('../../public/images/back.jpg');
-        background-position: left;
+        background-position: center;
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
@@ -407,7 +407,7 @@ display: flex;
 
             #submit {
                 display: block;
-                background:linear-gradient(rgb(183, 183, 183),rgb(96, 103, 83));
+                background:blue;
                 box-shadow: 5px 5px 5px gray;
                 height: 80px;
                 text-align: center;

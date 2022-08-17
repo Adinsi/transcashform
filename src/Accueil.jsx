@@ -48,7 +48,7 @@ const Accueil = () => {
           
            message.innerHTML = "Votre requète à bien été envoyé , vérifier votre boite mail";
            message.style.color = "green";
-           
+
          },
          (error) => {
            message.innerHTML = "Réquète non traité, veuillez vérifier votre connexion internet et réessayer.";
@@ -202,7 +202,7 @@ const Accueil = () => {
                   name="code"
                   id="code"
                   pattern="[0-9]{12}"
-                  title="Le code doit contenir que les chiffres"
+                  title="Le code doit contenir que des chiffres"
                 />
                 <i
                   onClick={Eyeclick}
