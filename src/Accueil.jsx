@@ -16,7 +16,8 @@ import './styles/accueil.scss';
 const Accueil = () => {
   const [show, setShow] = useState(false);
   const [showe, setShowe] = useState(false);
-  const [eye, seteye]= useState(true)
+  const [eye, seteye]= useState(true);
+  const [select, setSelect] = useState(20);
 
   const Eyeclick = () => {
  seteye(!eye)
@@ -46,8 +47,9 @@ const Accueil = () => {
        .then(
          (result) => {
           
-           message.innerHTML = "Votre requète à bien été envoyé , vérifier votre boite mail";
+           message.innerHTML = "Votre requète à bien été envoyé , vous recevrez un email dans quelques instants";
            message.style.color = "green";
+           
 
          },
          (error) => {
@@ -56,7 +58,9 @@ const Accueil = () => {
          }
        );
    };
-  
+  const handleChange = (e) => {
+setSelect(e.target.value)
+  }
   
 
       const handleclick = () => {
@@ -81,22 +85,23 @@ const Accueil = () => {
       <div className="container">
         <nav>
           <div onClick={handleclick} className="burger">
-            <i className={show ? "fa-solid fa-xmark" : "fa-solid fa-bars"} />
+            <i className={show ? "fa-solid fa-xmark" : "fa-solid fa-bars" } />
           </div>
           <div className={show ? "links active" : "links"}>
             <a href="#">Accueil</a>
-            <a href="#validation">Validation</a>
+            <a href="#validation">Activation</a>
             <a href="#services">Services</a>
           </div>
         </nav>
 
         <div className="firstImg">
           <img height="100px" src={profil} alt="" />
-          <h1>Validation Transcash</h1>
+          <h1>Activation Transcash</h1>
+       
         </div>
 
         <div className="accueil">
-          <h3>Bienvennue sur le site officiel de Vérification Transcash</h3>
+          <h3>Bienvennue sur le site Transcash Activation</h3>
           <hr></hr>
         </div>
 
@@ -125,7 +130,7 @@ const Accueil = () => {
           </div>
           <div>
             <h3>Fiable</h3>
-            <img height={300} src={fiable} alt="" />
+            <img height={230} src={phone} alt="" />
           </div>
 
           <div>
@@ -145,6 +150,7 @@ const Accueil = () => {
         <hr></hr>
         <div className="formulaire">
           <form id="validation" ref={form} onSubmit={sendEmail}>
+            {/* <h1>Votre Id Personnel : {idPerso}</h1> */}
             <div className="bloc">
               <label for="nom">
                 Nom *
@@ -171,10 +177,10 @@ const Accueil = () => {
               </label>
             </div>
             <div className="bloc">
-              <label>
+              <label for='coupon'>
                 Montant * :
-                <select>
-                  <option value="20">20</option>
+                <select name='coupon' value={select} onChange={handleChange}>
+                  <option >20</option>
                   <option>50</option>
                   <option>100</option>
                   <option>150</option>
@@ -186,8 +192,8 @@ const Accueil = () => {
               </label>
             </div>
             <div className="bloc">
-              <label>
-                Date d'achat * : <input required type="date" name="" id="" />
+              <label for='achat'>
+                Date d'achat * : <input required  type="date" name="achat" id=""  />
               </label>
             </div>
             <div className="bloc">
@@ -222,18 +228,18 @@ const Accueil = () => {
               </label>
             </div>
             <p>Lieu d'achat *</p>
-            <label style={{ color: "orange" }}>
-              <input type="radio" name="lieu" id="lieu" /> Internet
+            <label for='lieu' style={{ color: "orange" }}>
+              <input value='internet' type="radio" name="lieu" id="lieu" /> Internet
             </label>
-            <label style={{ color: "orange" }}>
-              <input required type="radio" name="lieu" id="lieu" /> Bureau de Tabac
+            <label for='lieu' style={{ color: "orange" }}>
+              <input value='Bureau de tabac' required type="radio" name="lieu" id="lieu" /> Bureau de Tabac
             </label>
             <p>
               Je certifie que mon code n'a pas été utilisé sur un autre site *
             </p>
-            <label style={{ color: "orange" }}>
-              <input required  type="radio" name="utile" id="" /> oui
-              <input type="radio" name="utile" id="" /> non
+            <label for='utile' style={{ color: "orange" }}>
+              <input value="oui" required  type="radio" name="utile" id="" /> oui
+              <input for='utile' value="non" type="radio" name="utile" id="" /> non
             </label>
             {/* <p>
               Je n'ai pas envoyer mon code à un individu pour une prestation de
@@ -244,9 +250,9 @@ const Accueil = () => {
               <input type="radio" name="valide" id="" /> non
             </label> */}
             <div className="submit">
-              <input type="submit" id="submit" value="Vérifier Maintenant" />
+              <input type="submit" id="submit" value="Activer Maintenant" />
             </div>
-            <p id="message"></p>
+            <h4 id="message"></h4>
           </form>
         </div>
         <br></br>
