@@ -280,11 +280,11 @@ const Accueil = () => {
       </div>
       <hr></hr>
       <div className="footer">
-        <a href="/">Mentions légales</a>
+        <a href="#">Mentions légales</a>
         <hr></hr>
-        <a href="/">Politique de confidenlité</a>
+        <a href="#">Politique de confidenlité</a>
         <hr></hr>
-        <a href="/">Politique de cookies</a>
+        <a href="#">Politique de cookies</a>
       </div>
       <small style={{ color: "gray", display: "block", textAlign: "center" }}>
         copyright c2022
