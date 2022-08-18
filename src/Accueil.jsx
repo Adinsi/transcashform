@@ -91,7 +91,7 @@ const Accueil = () => {
       </div> */}
 
       <div className="phone">
-        <img height="200px" width={300} src={phone} alt="" />
+        <img height="200px" width={300} src={secure} alt="" />
       </div>
 
       <h2>Activation de vos recharges</h2>
