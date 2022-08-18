@@ -419,23 +419,25 @@ display: flex;
                         color: white;
                         padding-bottom: 15px;
                         position: relative;
+input {
+        height: 40px;
+        padding: 10px;
+        text-align: center;
+        border-radius: 5px;
+        border-color: transparent;
+        box-shadow: 5px 5px 5px;
 
-                        input {
-                            height: 40px;
-                            padding: 10px;
-                            text-align: center;
-                            border-radius: 5px;
-                            border-color: transparent;
-                            box-shadow: 5px 5px 5px ;
-                        
-                            font-size: 1.3rem;
-                            font-weight: bolder;
-                            &::placeholder {
-                                    color: gray;
-                                    text-align: center;
-                                }
+        font-size: 1rem;
+        font-weight: bolder;
 
-                        }
+        &::placeholder {
+            color: rgb(5, 5, 142);
+            text-align: center;
+            font-weight: bolder;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+    }
                 }
 
 
