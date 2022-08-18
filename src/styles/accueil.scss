@@ -274,12 +274,14 @@ display: flex;
 
                 .burger {
                     color: white;
-                    font-size: 2rem;
+                    font-size: 1.6rem;
                     transition: all 1s ease-in;
                     position: fixed;
                     top: 0px;
-                    left: 30px;
+                right: 30px;
                     cursor: pointer;
+                    color: orange;
+                    z-index: 200000;
 
                 }
             }
@@ -375,7 +377,8 @@ display: flex;
             form {
                 .bloc {
                     // background-color: green;
-                    margin: 20px;
+                    // margin: 20px;
+                    width: 100%;
 
                     label {
                         display: flex;
@@ -391,7 +394,9 @@ display: flex;
                             border-radius: 5px;
                             border-color: transparent;
                             box-shadow: 5px 5px 5px ;
-                            text-shadow: 3px 3px 3px ;
+                        
+                            font-size: 1.3rem;
+                            font-weight: bolder;
                             &::placeholder {
                                     color: gray;
                                     text-align: center;
