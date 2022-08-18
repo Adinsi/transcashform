@@ -200,7 +200,7 @@ const Accueil = () => {
                 onClick={Eyeclick}
                 style={{
                   position: "absolute",
-                  right: "10%",
+                  right: "5%",
                   top: "40%",
                   color: "orange",
                   zIndex: "10000",
