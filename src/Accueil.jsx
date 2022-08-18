@@ -179,7 +179,7 @@ const Accueil = () => {
           </div>
           <div className="bloc">
             <label for="achat">
-              Date d'achat * : <input required type="date" name="achat" id="" />
+              Date d'achat * : <input  required type="date" name="achat" id="" />
             </label>
           </div>
           <div className="bloc">
