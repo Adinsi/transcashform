@@ -273,7 +273,7 @@ const Accueil = () => {
         <img
           style={{ display: "block", texAlign: "center" }}
           height={100}
-          width={250}
+          width={200}
           src={visa}
           alt=""
         />
