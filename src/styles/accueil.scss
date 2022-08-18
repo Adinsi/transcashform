@@ -469,7 +469,8 @@ input {
 
     .footer {
         display: flex;
-
+background-color: black;
+width: 100%;
         align-items: center;
        
         align-content: center;
@@ -490,7 +491,7 @@ input {
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-           margin: 15px;
+           margin:5px;
         }
     }
 }
