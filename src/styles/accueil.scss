@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200;1,400&display=swap');
 
-@media screen and (min-width:979px) and (max-width:2500px){
+@media screen and (min-width:1200px) and (max-width:2500px){
     
 body{
     background-image: url('../../public/images/back.jpg');
@@ -9,7 +9,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     // background-color: black;
-    min-width: 979px;
+    min-width: 1200px;
     max-width: 2500px;
     font-family: 'Montserrat', 'sans-serif';
     
@@ -164,12 +164,21 @@ display: flex;
     position: relative;
    
     input {
-            height: 60px;
-            border-radius: 5px;
-            border-color: transparent;
+            height: 40px;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                border-color: transparent;
+                box-shadow: 5px 5px 5px ;
+            
+                font-size: 1.2rem;
+                font-weight: bolder;
     &::placeholder {
-            color: gray;
+            color:rgb(5, 5, 142);
             text-align: center;
+            font-weight: bolder;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            
         }
         }
 
@@ -182,7 +191,7 @@ display: flex;
         }
        #submit{
         display: block;
-        background-color:whitesmoke;
+        background: rgb(32, 32, 171);
         box-shadow: 5px 5px 5px gray;
         height: 80px;
         text-align: center;
@@ -194,12 +203,18 @@ display: flex;
         border: none;
         cursor: pointer;
         &:hover{
-            background-color: blue;
+            background-color: rgb(26, 26, 151);
         }
        }
     }
 
-    // Fin du formulaire
+
+          .center {
+              display: flex;
+              align-items: center;
+              align-content: center;
+              justify-content: center;
+          }
 }
 
 
@@ -215,11 +230,19 @@ display: flex;
         color: white;
        
     }
+          hr {
+              color: blue;
+              height: 50px;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-around;
+              margin: 15px;
+          }
 }
 }
 
 
-@media screen and (min-width:320px) and (max-width:978px) {
+@media screen and (min-width:320px) and (max-width:1200px) {
 
     body {
         background-image: url('../../public/images/back.jpg');
@@ -231,6 +254,13 @@ display: flex;
         min-width: 320px;
         max-width: 978px;
         font-family: 'Montserrat', 'sans-serif';
+
+        .center{
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+        }
 
         .container {
 
@@ -275,7 +305,7 @@ display: flex;
 
                 .burger {
                     color: white;
-                    font-size: 1.6rem;
+                    font-size: 1.8rem;
                     transition: all 1s ease-in;
                     position: fixed;
                     top: 0px;
@@ -323,7 +353,7 @@ display: flex;
             }
 
             h2 {
-                color:rgb(237, 217, 217);
+                color:orange;
 
                 text-align: center;
             }
@@ -343,6 +373,8 @@ display: flex;
                 img {
                     box-shadow: 5px 5px 5px;
                 }
+
+                
             }
 
             .display {
@@ -412,7 +444,7 @@ display: flex;
 
             #submit {
                 display: block;
-                background:blue;
+                background:rgb(32, 32, 171);
                 box-shadow: 5px 5px 5px gray;
                 height: 80px;
                 text-align: center;
@@ -424,7 +456,7 @@ display: flex;
                 border: none;
                 cursor: pointer;
                 &:hover {
-                        background:rgb(0, 211, 39);
+                        background:rgb(4, 1, 31);
                     }
             }
         }
