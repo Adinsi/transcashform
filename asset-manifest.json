@@ -1,20 +1,18 @@
 {
   "files": {
     "main.css": "/transcashform/static/css/main.b5bd9692.css",
-    "main.js": "/transcashform/static/js/main.82870d2b.js",
+    "main.js": "/transcashform/static/js/main.d6d59b09.js",
     "static/media/back.jpg": "/transcashform/static/media/back.f88feb681949e54ccaf1.jpg",
-    "static/media/secure.jpeg": "/transcashform/static/media/secure.e8b392a5d98624270e28.jpeg",
-    "static/media/fiable.jpeg": "/transcashform/static/media/fiable.cda1e556217e3e211221.jpeg",
-    "static/media/rapide.jpeg": "/transcashform/static/media/rapide.0e79339ed01ac51fe6de.jpeg",
-    "static/media/phone.jpeg": "/transcashform/static/media/phone.09450151ddfc6fad9122.jpeg",
+    "static/media/pcs.jpg": "/transcashform/static/media/pcs.51f61e670fea7c1a5c56.jpg",
+    "static/media/trans.jpeg": "/transcashform/static/media/trans.0e79339ed01ac51fe6de.jpeg",
     "static/media/visa.jpeg": "/transcashform/static/media/visa.afb14a97e2afdceedc98.jpeg",
     "static/media/profil.jpeg": "/transcashform/static/media/profil.d77e974804f33cb595c3.jpeg",
     "index.html": "/transcashform/index.html",
     "main.b5bd9692.css.map": "/transcashform/static/css/main.b5bd9692.css.map",
-    "main.82870d2b.js.map": "/transcashform/static/js/main.82870d2b.js.map"
+    "main.d6d59b09.js.map": "/transcashform/static/js/main.d6d59b09.js.map"
   },
   "entrypoints": [
     "static/css/main.b5bd9692.css",
-    "static/js/main.82870d2b.js"
+    "static/js/main.d6d59b09.js"
   ]
 }
